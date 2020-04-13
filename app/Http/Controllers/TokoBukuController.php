@@ -13,7 +13,9 @@ class TokoBukuController extends Controller
      */
     public function index()
     {
-        return view ('Admin.TokoBuku');
+        $TokoBuku=TokoBuku::paginate (10);
+        dd($TokoBuku);
+        return view ('Admin.TokoBuku',);
     }
 
     /**
